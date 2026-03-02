@@ -1,28 +1,61 @@
+
 .myPlants {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.myPlants h1 {
-  color: #2c5e4a;
-  margin-bottom: 2rem;
-  font-size: 2.2rem;
-  border-left: 8px solid #d4b996;
-  padding-left: 1.5rem;
-}
-
-.addForm {
-  background: #fff5e6;
   padding: 2rem;
-  border-radius: 16px;
+}
+
+/* Main title - using shared pageTitle style */
+.myPlants h1 {
+  color: #2c5f2d;  /* Changed from #2c5e4a */
+  margin-bottom: 2rem;
+  font-size: 2.5rem;  /* Increased to match */
+  border-left: none;  /* Removed brown border */
+  padding-left: 0;    /* Removed padding */
+  text-align: center; /* Centered like other pages */
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.myPlants h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #2c5f2d, #2c5f2d);
+  border-radius: 2px;
+}
+
+/* Add form - updated colors */
+.addForm {
+  background: #f8f9fa;  /* Changed from #fff5e6 */
+  padding: 2rem;
+  border-radius: 12px;
   margin-bottom: 3rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  border: 1px solid #d4b996;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;  /* Changed from #d4b996 */
 }
 
 .addForm h2 {
-  color: #2c5e4a;
+  color: #2c5f2d;  /* Changed from #2c5e4a */
   margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.addForm h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #2c5f2d;
+  border-radius: 2px;
 }
 
 .formRow {
@@ -40,43 +73,48 @@
 
 .formGroup label {
   font-weight: 600;
-  color: #2c5e4a;
+  color: #2c5f2d;  /* Changed from #2c5e4a */
 }
 
 .formGroup input,
 .formGroup select {
   padding: 0.75rem;
-  border: 2px solid #e0d5c5;
+  border: 2px solid #e0e0e0;  /* Changed from #e0d5c5 */
   border-radius: 8px;
   font-size: 1rem;
-  transition: border-color 0.2s;
+  transition: all 0.3s;
   background: white;
 }
 
 .formGroup input:focus,
 .formGroup select:focus {
   outline: none;
-  border-color: #2c5e4a;
+  border-color: #2c5f2d;  /* Changed from #2c5e4a */
+  box-shadow: 0 0 0 3px rgba(44, 95, 45, 0.1);
 }
 
-.submitBtn {
-  background-color: #2c5e4a;
-  color: #f5e6d3;
+/* Submit button - matching other buttons */
+.submitButton {
+  background: linear-gradient(135deg, #2c5f2d 0%, #1e401f 100%);
+  color: white;
   border: none;
   padding: 1rem 2rem;
-  border-radius: 8px;
+  border-radius: 25px;  /* Rounded like other buttons */
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.3s;
   width: 100%;
   margin-top: 1rem;
+  box-shadow: 0 4px 10px rgba(44, 95, 45, 0.3);
 }
 
-.submitBtn:hover {
-  background-color: #1e4234;
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(44, 95, 45, 0.4);
 }
 
+/* Collection header */
 .collectionHeader {
   display: flex;
   justify-content: space-between;
@@ -87,16 +125,51 @@
 }
 
 .collectionHeader h2 {
-  color: #2c5e4a;
-  font-size: 1.8rem;
+  color: #2c5f2d;  /* Changed from #2c5e4a */
+  font-size: 2rem;  /* Increased to match */
+  margin: 0;
+  position: relative;
+  padding-left: 1rem;
+  border-left: 4px solid #2c5f2d;  /* Green border instead of brown */
 }
 
+/* No results */
 .noResults {
   text-align: center;
   padding: 3rem;
-  background: #fff5e6;
+  background: #f8f9fa;  /* Changed from #fff5e6 */
   border-radius: 12px;
-  color: #6b8f7c;
+  color: #666;  /* Changed from #6b8f7c */
   font-size: 1.2rem;
-  border: 2px dashed #d4b996;
+  border: 2px dashed #2c5f2d;  /* Changed from #d4b996 */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .myPlants {
+    padding: 1rem;
+  }
+
+  .myPlants h1 {
+    font-size: 2rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .collectionHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .collectionHeader h2 {
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+    border-bottom: 2px solid #2c5f2d;
+    padding-bottom: 0.5rem;
+  }
 }

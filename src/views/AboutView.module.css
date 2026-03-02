@@ -1,0 +1,270 @@
+
+
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Main title */
+.about > h2 {
+  color: #2c5f2d;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.about > h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #2c5f2d, #2c5f2d);
+  border-radius: 2px;
+}
+
+/* Main content layout */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Image section - LEFT side */
+.imageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #e0e0e0;
+}
+
+.image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(44, 95, 45, 0.2);
+  border-color: #2c5f2d;
+}
+
+/* Contact box - below image */
+.contactBox {
+  background: linear-gradient(135deg, #2c5f2d 0%, #1e401f 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.contactBox:hover {
+  transform: translateY(-5px);
+}
+
+.contactBox h3 {
+  color: #ffe484;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.contactBox h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: #ffe484;
+}
+
+.contactBox p {
+  margin: 1rem 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contactBox p::before {
+  font-size: 1.2rem;
+}
+
+.contactBox p:nth-of-type(1)::before {
+  content: '📍';
+}
+
+.contactBox p:nth-of-type(2)::before {
+  content: '📧';
+}
+
+.contactBox p:nth-of-type(3)::before {
+  content: '📞';
+}
+
+/* Text section - RIGHT side with cards */
+.textSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Cards for Vision, Mission, Values - exactly like Home page */
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  border: 1px solid #e0e0e0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(44, 95, 45, 0.15);
+  border-color: #2c5f2d;
+}
+
+.card h2 {
+  color: #2c5f2d;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.card h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #2c5f2d;
+  border-radius: 2px;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+/* Special styling for Values card */
+.valuesCard {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.valuesCard h2 {
+  color: #2c5f2d;
+}
+
+/* Values list */
+.valuesList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.valueItem {
+  text-align: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.valueItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(44, 95, 45, 0.1);
+}
+
+.valueIcon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.valueItem span:last-child {
+  color: #2c5f2d;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .content {
+    gap: 2rem;
+  }
+
+  .valuesList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 1rem;
+  }
+
+  .about > h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .image {
+    height: 250px;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .valuesList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .valuesList {
+    grid-template-columns: 1fr;
+  }
+
+  .image {
+    height: 200px;
+  }
+
+  .contactBox {
+    padding: 1.5rem;
+  }
+
+  .contactBox h3 {
+    font-size: 1.3rem;
+  }
+}

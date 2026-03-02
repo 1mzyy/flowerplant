@@ -1,0 +1,387 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.heroFullWidth {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+.heroImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  opacity: 0.8;
+}
+
+/* Optional overlay text on hero */
+.heroOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+}
+
+.heroOverlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.heroOverlay p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Content container - centered with max-width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Welcome section */
+.welcome {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.welcome h1 {
+  color: #2c5f2d;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.welcome p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Plant Care Basics section */
+.careBasics {
+  margin: 4rem 0;
+}
+
+.careBasics h2 {
+  color: #2c5f2d;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.careBasics h2:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #2c5f2d;
+  margin: 1rem auto 0;
+}
+
+.careGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.careCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #e0e0e0;
+}
+
+.careCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(44, 95, 45, 0.15);
+}
+
+.careIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.careCard h3 {
+  color: #2c5f2d;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.careCard p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Popular Plants section */
+.popularPlants {
+  margin: 4rem 0;
+}
+
+.popularPlants h2 {
+  color: #2c5f2d;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.popularPlants h2:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #2c5f2d;
+  margin: 1rem auto 0;
+}
+
+/* Plant Grid */
+.plantGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Plant Card */
+.plantCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #eee;
+}
+
+.plantCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(44, 95, 45, 0.2);
+  border-color: #2c5f2d;
+}
+
+/* Plant Card Header */
+.plantHeader {
+  background: linear-gradient(135deg, #2c5f2d 0%, #1e401f 100%);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.plantHeader h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Plant Card Content */
+.plantContent {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.scientificName {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #ddd;
+}
+
+/* Plant Details */
+.plantDetails {
+  padding: 2rem;
+  flex: 1;
+}
+
+.detailRow {
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.detailRow:hover {
+  background: #e9ecef;
+}
+
+.detailLabel {
+  font-weight: bold;
+  min-width: 80px;
+  color: #2c5f2d;
+}
+
+.detailValue {
+  color: #555;
+  flex: 1;
+}
+
+/* Level Badge */
+.levelBadge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: auto;
+}
+
+.beginner {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.intermediate {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.advanced {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.expert {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* No Results */
+.noResults {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+  font-size: 1.1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.popularPlants {
+  margin-bottom: 1rem;   
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .careGrid,
+  .plantGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .heroImage {
+    height: 350px;
+  }
+  
+  .heroOverlay h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .heroImage {
+    height: 300px;
+  }
+  
+  .heroOverlay {
+    padding: 1.5rem;
+    width: 90%;
+  }
+  
+  .heroOverlay h1 {
+    font-size: 2rem;
+  }
+  
+  .heroOverlay p {
+    font-size: 1rem;
+  }
+  
+  .careGrid,
+  .plantGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .welcome h1 {
+    font-size: 2rem;
+  }
+  
+  .welcome p {
+    font-size: 1rem;
+  }
+  
+  .careBasics h2,
+  .popularPlants h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroImage {
+    height: 250px;
+  }
+  
+  .heroOverlay h1 {
+    font-size: 1.5rem;
+  }
+  
+  .heroOverlay {
+    padding: 1rem;
+  }
+  
+  .plantHeader h3 {
+    font-size: 1.3rem;
+  }
+  
+  .detailRow {
+    flex-direction: column;
+  }
+  
+  .detailLabel {
+    margin-bottom: 0.25rem;
+  }
+}
