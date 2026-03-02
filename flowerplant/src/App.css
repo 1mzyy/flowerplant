@@ -1,0 +1,20 @@
+/* Minimal global styles - only reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f5f0; /* beige background */
+  color: #2c4a3e; /* dark green text */
+}
+
+.main-content {
+  min-height: calc(100vh - 200px); /* keeps footer at bottom */
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
