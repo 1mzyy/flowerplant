@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://1mzyy.github.io/FlowerPlant",
+  
+  "homepage": "https://1mzyy.github.io/flowerplant",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

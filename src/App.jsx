@@ -11,13 +11,13 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <HomeView /> },
-      { path: "/myplants", element: <MyPlantsView /> },
-      { path: "/about", element: <AboutView /> },
-      { path: "/update/:id", element: <MyPlantsView /> }
+      { path: "myplants", element: <MyPlantsView /> },
+      { path: "about", element: <AboutView /> },
+      { path: "update/:id", element: <MyPlantsView /> }
     ]
   }
 ], {
-  basename: '/FlowerPlant'  // Capital F to match
+  basename: '/flowerplant'  // MUST match repo name
 });
 
 function App() {
