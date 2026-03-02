@@ -2,6 +2,7 @@
   "name": "flowerplant",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://1mzyy.github.io/flowerplant",
   "type": "module",
   "scripts": {
     "dev": "vite",
